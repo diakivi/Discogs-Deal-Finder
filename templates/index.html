@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discogs Deal Finder</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .deal-container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .deal-card { border: 1px solid #ddd; padding: 10px; width: 250px; text-align: center; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <h1>Discogs Deals</h1>
+    <div class="deal-container">
+        {% for deal in deals %}
+        <div class="deal-card">
+            <img src="{{ deal.image }}" alt="{{ deal.title }}">
+            <h2>{{ deal.title }}</h2>
+            <p>Artist: {{ deal.artist }}</p>
+            <p>Year: {{ deal.year }}</p>
+            <p>Price: ${{ deal.price }}</p>
+            <p>Shipping: ${{ deal.shipping }}</p>
+            <p>Want/Have Ratio: {{ deal.want_have_ratio }}</p>
+            <p>Seller: {{ deal.seller }} ({{ deal.location }})</p>
+            <a href="{{ deal.url }}" target="_blank">View on Discogs</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
