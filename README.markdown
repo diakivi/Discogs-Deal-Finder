@@ -1,4 +1,4 @@
-## Here follows a transcript of a scope-defining conversation I had with chat GPT once I asked it to synthesize and spell out the requirements for the app before beginning from scratch developing the code (my response in blue):
+## Here follows a transcript of a scope-defining conversation I had with chat GPT once I asked it to synthesize and spell out the requirements for the app before beginning from scratch developing the code (my response in block quote):
 
 📌 Project Goals & Functional Capabilities
 
